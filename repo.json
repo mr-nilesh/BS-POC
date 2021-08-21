@@ -6,4 +6,8 @@
   "name": "BS-Payments",
   "url": "https://github.com/mr-nilesh/BS-Payments.git",
   "defaultBranch": "master"
+}, {
+  "name": "BS-Shared",
+  "url": "https://github.com/mr-nilesh/BS-Shared.git",
+  "defaultBranch": "master"
 }]

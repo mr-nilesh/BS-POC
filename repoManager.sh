@@ -1,14 +1,24 @@
 echo "Running repo manager..."
+# If cloning
 if [ "$1" = "clone" ]
 then
+  # Loop through all the repos and clone it in root folder
   jq -c '.[]' repo.json | while read repo; do
+    nameWithQuotes=$(echo $repo | jq '.name')
+    name=$(echo $nameWithQuotes | tr -d '"')
+    if [ -d "$PWD/$name" ]
+    then
+      continue
+    fi
     repoUrlWithQuotes=$(echo $repo | jq '.url')
     repoUrl=$(echo $repoUrlWithQuotes | tr -d '"')
     echo $repoUrl
     git clone $repoUrl
   done
+# Else if pulling latest from specific branch
 elif [ "$1" = "pull" ]
 then
+  # Loop through all the repos and pull lastest from specific branch
   jq -c '.[]' repo.json | while read repo; do
     nameWithQuotes=$(echo $repo | jq '.name')
     name=$(echo $nameWithQuotes | tr -d '"')
