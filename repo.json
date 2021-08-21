@@ -9,5 +9,6 @@
 }, {
   "name": "BS-Shared",
   "url": "https://github.com/mr-nilesh/BS-Shared.git",
-  "defaultBranch": "master"
+  "defaultBranch": "master",
+  "isShared": true
 }]

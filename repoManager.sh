@@ -15,6 +15,22 @@ then
     echo $repoUrl
     git clone $repoUrl
   done
+# Else if cone only shared repo
+elif [ "$1" = "pullSharedOnly" ]
+then
+  # Loop through all the repos and only clone shared one
+  jq -c '.[]' repo.json | while read repo; do
+    isShared=$(echo $repo | jq '.isShared')
+    nameWithQuotes=$(echo $repo | jq '.name')
+    name=$(echo $nameWithQuotes | tr -d '"')
+    if [ "$isShared" = true ]
+    then
+      repoUrlWithQuotes=$(echo $repo | jq '.url')
+      repoUrl=$(echo $repoUrlWithQuotes | tr -d '"')
+      echo $repoUrl
+      git clone $repoUrl
+    fi
+  done
 # Else if pulling latest from specific branch
 elif [ "$1" = "pull" ]
 then
