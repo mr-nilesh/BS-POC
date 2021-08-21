@@ -1,0 +1,21 @@
+{
+  "name": "bs-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clone": "./repoManager.sh clone",
+    "pull": "./repoManager.sh pull"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr-nilesh/BS-POC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr-nilesh/BS-POC/issues"
+  },
+  "homepage": "https://github.com/mr-nilesh/BS-POC#readme"
+}

@@ -1,0 +1,9 @@
+[{
+  "name": "BS-Products",
+  "url": "https://github.com/mr-nilesh/BS-Products.git",
+  "defaultBranch": "master"
+}, {
+  "name": "BS-Payments",
+  "url": "https://github.com/mr-nilesh/BS-Payments.git",
+  "defaultBranch": "master"
+}]
