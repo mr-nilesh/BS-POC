@@ -8,9 +8,6 @@
     "clone": "./repoManager.sh clone",
     "pull": "./repoManager.sh pull"
   },
-  "dependencies": {
-    "BS-Shared": "https://github.com/mr-nilesh/BS-Shared.git"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mr-nilesh/BS-POC.git"
