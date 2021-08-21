@@ -19,5 +19,6 @@ then
     echo "Default branch to pull from $defaultBranch"
     git checkout $defaultBranch
     git pull origin $defaultBranch
+    cd ..
   done
 fi
